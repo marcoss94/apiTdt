@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+    <title>Api TDT</title>
+  </head>
+  <body>
+    <main>
+      <div id="spinner" class="spinner hidden">
+        <div class="lds-dual-ring"></div>
+      </div>
+      <section id="login" class="show">
+        <h1>Api TDT</h1>
+        <form>
+          <input type="text" id="email" placeholder="email" />
+          <input type="password" id="password" placeholder="password" />
+          <input type="submit" id="submit" value="Login" />
+          <span id="error"></span>
+        </form>
+      </section>
+      <aside id="navbar">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAA2CAYAAAAMNl3OAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABBFJREFUeNrsnVFy2jAQQEUmB3CnF3BuQGf4bvAJQk8Q+MlvwglCTgD85ifmBJAThPSbmfgGpQfolBO03XXWHY2RbEnIwTa7MxoG0NqOnlbeXa1JR+TkZrMJ4WUA7Ur6OIH2/NjrrUWBgG4g6QbSV8/QYtDflej3SbcrfbyFtig7N4taOrkBvoOX+xwcWVbQRipQoItQltBCjS7qjEE31kyMKbRhwbVqz82ilzNpkCc0yEFBf7TOFwKSh/tSAFfQcZ+grwrisgTu/3MzMgfAtDTeG+p0FX2XJRNDlindBuSJ1Tc9N/VnsbTgW0u9u8yK4XVQYrkqS5bPd2157lvGZg944KCbWd2lg25XWtpDS92AVhwWm3uwK6Scx2s7OQJGUF/ALC0HnPDwNQfwylIPY1FOPDQI8NxSb84JhwYBpjTg2GJpnvHQNeweDJAR2oiWX53gUh6x9TZHzuU3mCeGGBMhDsX+ZgMm/FvpWH0++9oX5tk0lWx//fkew3Emhv4LjmMCOruCawpFefq2UOD4k/P8h2SdsxNbhhHu/QH6eIuLbY8BENGY5gBC5bCGB14TyoTj4ONKuoECoJfQKkn6MOB6gQ4YcHsl20+vzsk6YYnFfuIGB3yq6btQOE5FYeU4d1xdUUUfrHiIDhvpRYo+U7Gf/090YS4Dfvc2t+K9NEh2gHTdf2qcIq3XnOu/hmMjwBeh3qhB+DF52GuFY7YzOEc7AVO1iFwPhtBeVWVCR55QOwCF1vlDYckhfNeFPl5CUh+AXZIeiWewRfVgQ/geiwRGdYrjCTJOvDtN2OblWn04Wa/HBGxYD5b2ob51Et3YefOmfQCOHax44QluIMzrwdKiv5oBrjzlezBgynw92EwIjzXOtvVgXaohOxnxEgfTRsWDIdyRx+u/+iCdKmPf+gMmyBOK21aae+7IM1zXe1VYI8C6ClFfK5zfMImW3rVgKRXwoJ80k21nGWcXTvSmpypdnJTtgf0uD8kZY4yLmwtCvxU4dzgsHrPbRsDPVemosltSjPobBvQvNJNHafrUN23w/k3o69CzrVqXEPNNOkdrAK8sLDIdHLiN2BQYLj7wb0G4UVERgIuFNxowhWjfDJdq7GPr5M3Ex5QHZ3ATw5VldhKACXK267ItWdYi21QlWVNUseMYQ7uwyT1D37Fp7qEVmw0E7qKKzYYMMtVtXec838QxvEmvC28xBkuy7romlMvGv1n7fFjnmGDoITKXZ34jfuL/RJZoFgbMgFkYMAsDZmHALAyYhQGzMGAWBsyAWRgwCwNmOW3A/FsfFUvn2Bdws9ngA1ihzaR47PU+MbrmLNHzivuzBdfAinHTv2/QFYvmvjC25jlZWDgXl/RJf6OLkTXQgiVLRivmf8rhUf4JMACTc27MZ5B/EAAAAABJRU5ErkJggg=="
+          alt="logo"
+        />
+        <button id="exit">Salir</button>
+      </aside>
+      <section id="form-create">
+        <form>
+          <input type="text" id="name" placeholder="name" />
+          <input type="text" id="alias_name" placeholder="alias_name" />
+          <input type="submit" id="create-organization" value="Create" />
+        </form>
+      </section>
+      <section class="container">
+        <h1>Organization List</h1>
+        <ul id="organization"></ul>
+      </section>
+      <div id="notification" class="hidden"></div>
+    </main>
+  </body>
+</html>

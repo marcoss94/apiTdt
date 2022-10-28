@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+#login {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #f5f5f5;
+  text-align: center;
+  flex-direction: column;
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+form input:not([type="file"]) {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+form input[type="submit"] {
+  border: 1px solid #66cccc;
+  background: #66cccc;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+form input[type="submit"]:hover {
+  background: #74dbdb;
+  border: 1px solid #74dbdb;
+}
+
+form input[type="submit"]:active {
+  background: #66cccc;
+  border: 1px solid #66cccc;
+}
+
+#login.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#login.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#error {
+  height: 12px;
+  color: red;
+  font-size: 12px;
+}
+
+#navbar {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+#navbar img {
+  width: 80px;
+}
+#navbar button {
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 40px;
+  transition: 0.5s ease;
+}
+#navbar button:hover {
+  color: #74dbdb;
+}
+
+#form-create {
+  padding: 24px;
+}
+
+.container {
+  padding: 24px;
+}
+
+#notification {
+  background-color: #74dbdb;
+  width: 200px;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+
+#notification.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#notification.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.delete-org,
+.edit-org {
+  margin-left: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-org svg {
+  width: 20px;
+  background-color: rgb(185, 142, 119);
+  border-radius: 4px;
+}
+.edit-org svg {
+  width: 20px;
+  background-color: rgb(119, 179, 185);
+  border-radius: 4px;
+}
+
+#organization p {
+  display: inline;
+}
+.delete-org svg:hover {
+  background-color: rgb(199, 73, 28);
+}
+.edit-org svg:hover {
+  background-color: rgb(50, 116, 142);
+}
+.spinner {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background-color: #262828a6;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.spinner.show {
+  opacity: 1;
+  visibility: visible;
+}
+.spinner.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #e2e2e2;
+  border-color: #e2e2e2 transparent #e2e2e2 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
